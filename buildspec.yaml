@@ -3,7 +3,7 @@ phases:
   pre_build:
     commands:
       - apt update
-      - apt install libx11-xcb1
+      - apt install libx11-xcb1 libxtst6
       - npm install
   build:
     commands:
