@@ -7,5 +7,12 @@ phases:
       - npm install
   build:
     commands:
+      - cat /etc/passwd
       - npm run build
       - ls -la public/
+artifacts:
+  files:
+    - **/*
+  name: public
+  discard-paths: yes
+  base-directory: public
