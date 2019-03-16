@@ -2,6 +2,8 @@ version: 0.2
 phases:
   pre_build:
     commands:
+      - apt update
+      - apt install libx11-xcb1
       - npm install
   build:
     commands:
