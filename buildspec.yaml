@@ -12,7 +12,7 @@ phases:
       - ls -la public/
 artifacts:
   files:
-    - **/*
+    - '**/*'
   name: public
   discard-paths: yes
   base-directory: public
