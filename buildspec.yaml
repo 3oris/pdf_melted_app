@@ -2,12 +2,18 @@ version: 0.2
 phases:
   pre_build:
     commands:
+      - cat /etc/passwd
+      - echo "ENV"
+      - env
+      - echo "PWD"
+      - pwd
+      - echo
       - apt update
+      - apt upgrade
       - apt -y install libx11-xcb1 libxtst6 libnss3 libasound2 libatk-bridge2.0-0 libgtk-3-0
       - npm install
   build:
     commands:
-      - cat /etc/passwd
       - npm run build
       - ls -la public/
 artifacts:
