@@ -9,12 +9,14 @@ phases:
       - pwd
       - echo
       - apt update
-      - apt upgrade
-      - apt -y install libx11-xcb1 libxtst6 libnss3 libasound2 libatk-bridge2.0-0 libgtk-3-0
-      - npm install
+      - echo "apt -y install libx11-xcb1 libxtst6 libnss3 libasound2 libatk-bridge2.0-0 libgtk-3-0"
+      - "npm install"
+      - usermod -s /bin/bash www-data
+      - find -type f -exec chown www-data:www-data {} 
   build:
+    run-as: 'www-data'
     commands:
-      - npm run build
+      - echo "npm run build"
       - ls -la public/
 artifacts:
   files:
