@@ -19,6 +19,7 @@ phases:
       - apt-get install -y libx11-xcb1 libxtst6 libnss3 libasound2 libatk-bridge2.0-0 libgtk-3-0
       # sysctl kernel.unprivileged_userns_clone=1
       # sysctl -w kernel.userns_restrict=0
+      - curl https://intoli.com/install-google-chrome.sh | bash
       - npm install
       - chown -R www-data:www-data .
       - chown -R www-data:www-data /root/
