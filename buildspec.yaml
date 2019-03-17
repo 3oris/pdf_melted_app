@@ -10,14 +10,13 @@ phases:
       - pwd
       - echo
       - apt update
-      - echo "apt -y install libx11-xcb1 libxtst6 libnss3 libasound2 libatk-bridge2.0-0 libgtk-3-0"
-      - echo "npm install"
-      - echo "find . -exec chown www-data:www-data  {} \;"
+      - apt -y install libx11-xcb1 libxtst6 libnss3 libasound2 libatk-bridge2.0-0 libgtk-3-0
+      - npm install
       - chown -R www-data:www-data .
   build:
     run-as: 'www-data'
     commands:
-      - echo "npm run build"
+      - npm run build
       - ls -la
       - whoami
 artifacts:
