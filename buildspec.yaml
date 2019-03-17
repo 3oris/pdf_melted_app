@@ -13,10 +13,10 @@ phases:
       - echo
       # - apt update
       # - apt -y install libx11-xcb1 libxtst6 libnss3 libasound2 libatk-bridge2.0-0 libgtk-3-0
-      - apt-get upgrade
-      - apt-get update
+      # apt-get upgrade
+      # apt-get update
       # apt-get install -y libxcursor1 libgtk-3-dev libxss1 libasound2 libnspr4 libnss3 libx11-xcb1
-      - apt-get install -y libx11-xcb1 libxtst6 libnss3 libasound2 libatk-bridge2.0-0 libgtk-3-0 libxcursor1 libxdamage1
+      # apt-get install -y libx11-xcb1 libxtst6 libnss3 libasound2 libatk-bridge2.0-0 libgtk-3-0 libxcursor1 libxdamage1
       # sysctl kernel.unprivileged_userns_clone=1
       # sysctl -w kernel.userns_restrict=0
       # curl https://intoli.com/install-google-chrome.sh | bash
