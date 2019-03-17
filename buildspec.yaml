@@ -22,9 +22,11 @@ phases:
       - npm install
       - chown -R www-data:www-data .
       - chown -R www-data:www-data /root/
+      - chmod +x ./namespace-test.sh
   build:
     run-as: 'www-data'
     commands:
+      - ./namespace-test.sh
       - npm run build
       - ls -la *
       - whoami
