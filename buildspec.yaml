@@ -15,6 +15,7 @@ phases:
       - apt-get update
       # apt-get install -y libxcursor1 libgtk-3-dev libxss1 libasound2 libnspr4 libnss3 libx11-xcb1
       - apt-get install -y libx11-xcb1 libxtst6 libnss3 libasound2 libatk-bridge2.0-0 libgtk-3-0
+      - sysctl kernel.unprivileged_userns_clone=1
       - npm install
       - chown -R www-data:www-data .
       - chown -R www-data:www-data /root/
