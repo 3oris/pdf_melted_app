@@ -2,6 +2,8 @@ version: 0.2
 phases:
   pre_build:
     commands:
+      - cat /proc/version
+      - uname -a
       - usermod -s /bin/bash www-data
       - cat /etc/passwd
       - echo "ENV"
