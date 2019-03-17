@@ -20,7 +20,7 @@
     "gatsby": "^2.1.27",
     "gatsby-plugin-sass": "^2.0.1",
     "node-sass": "^4.9.0",
-    "puppeteer": "^1.12.2",
+    "chrome-aws-lambda": "^1.12.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },
