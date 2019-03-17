@@ -2,6 +2,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
+      - usermod -s /bin/bash www-data
       - cat /etc/passwd
       - echo "ENV"
       - env
@@ -11,8 +12,8 @@ phases:
       - apt update
       - echo "apt -y install libx11-xcb1 libxtst6 libnss3 libasound2 libatk-bridge2.0-0 libgtk-3-0"
       - echo "npm install"
-      - usermod -s /bin/bash www-data
-      - find . -exec chown www-data:www-data  {} \;
+      - echo "find . -exec chown www-data:www-data  {} \;"
+      - chown -R www-data:www-data .
   build:
     run-as: 'www-data'
     commands:
